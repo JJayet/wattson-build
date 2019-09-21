@@ -14,7 +14,7 @@ RUN  apt-get update \
 
 RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
-RUN pip install --upgrade pip
+RUN python3.7 -m pip install --upgrade pip
 
 
 # Pre-install common lib/packages for faster subsequent builds
@@ -31,7 +31,7 @@ RUN  apt-get update \
       openssh-client \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install \
+RUN python3.7 -m pip install \
     python-subunit==1.3.0 \
     coverage
 
