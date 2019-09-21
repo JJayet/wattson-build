@@ -10,7 +10,7 @@ RUN  apt-get update \
        build-essential \
        libffi-dev \
        locales \
-       python3.7
+       python3.7 \
   && rm -rf /var/lib/apt/lists/*
 
 RUN update-alternatives --config python3
