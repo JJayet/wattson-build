@@ -15,7 +15,7 @@ RUN  apt-get update \
 
 RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
-pip3 install --upgrade pip
+RUN pip3 install --upgrade pip
 
 
 # Pre-install common lib/packages for faster subsequent builds
