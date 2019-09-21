@@ -9,7 +9,7 @@ RUN  apt-get update \
        build-essential \
        libffi-dev \
        locales \
-       python3.7 python3-pip python3-setuptools zlib1g-dev \
+       python3.7 python3-pip python3-setuptools zlib1g-dev python3-distutils \
        libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev \
   && rm -rf /var/lib/apt/lists/*
 
