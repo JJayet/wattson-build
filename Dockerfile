@@ -9,7 +9,7 @@ RUN  apt-get update \
        build-essential \
        libffi-dev \
        locales \
-       python3.7 python3-pip \
+       python3.7 python3-pip python3-setuptools \
   && rm -rf /var/lib/apt/lists/*
 
 RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
