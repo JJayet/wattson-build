@@ -10,11 +10,11 @@ RUN  apt-get update \
        build-essential \
        libffi-dev \
        locales \
-       python3.7 \
+       python3.7 python3-pip \
   && rm -rf /var/lib/apt/lists/*
 
 RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
-
+RUN ln -s /usr/bin/pip3 /usr/bin/pip
 RUN pip install --upgrade pip
 
 
