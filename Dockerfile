@@ -2,8 +2,9 @@ FROM mcr.microsoft.com/azure-pipelines/vsts-agent:ubuntu-16.04
 
 # Install your stuff here
 
-RUN apt-get remove python3.5
+
 RUN add-apt-repository ppa:jonathonf/python-3.7
+RUN apt-get remove python3
 RUN  apt-get update \
   && apt-get install -y --no-install-recommends \
        build-essential \
