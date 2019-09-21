@@ -1,8 +1,7 @@
-FROM microsoft/vsts-agent:ubuntu-16.04
+FROM mcr.microsoft.com/azure-pipelines/vsts-agent:ubuntu-16.04
 
 # Install your stuff here
 
-WORKDIR /app
 
 RUN add-apt-repository ppa:jonathonf/python-3.7
 RUN  apt-get update \
