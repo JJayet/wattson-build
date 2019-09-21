@@ -13,7 +13,7 @@ RUN  apt-get update \
        python3.7 \
   && rm -rf /var/lib/apt/lists/*
 
-RUN update-alternatives --config python3
+RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
 RUN pip install --upgrade pip
 
