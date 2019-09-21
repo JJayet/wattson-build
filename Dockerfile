@@ -31,6 +31,3 @@ RUN  apt-get update \
       git \
       openssh-client \
   && rm -rf /var/lib/apt/lists/*
-
-
-CMD /bin/sh
