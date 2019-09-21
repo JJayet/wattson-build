@@ -9,10 +9,11 @@ RUN  apt-get update \
        build-essential \
        libffi-dev \
        locales \
-       python3.7 python3-pip python3-setuptools zlib1g-dev python3.7-distutils \
+       python3.7 python3-pip python3-setuptools zlib1g-dev  \
        libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev \
   && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get remove python3.5
 RUN  update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
 RUN pip3 install --upgrade pip
@@ -32,7 +33,7 @@ RUN  apt-get update \
       openssh-client \
   && rm -rf /var/lib/apt/lists/*
 
-RUN python3.7 -m pip install \
+RUN pip3 install \
     python-subunit==1.3.0 \
     coverage
 
