@@ -34,7 +34,7 @@ RUN  apt-get update \
       openssh-client \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install wheel \
+RUN pip3 install wheel \
     python-subunit==1.3.0 \
     coverage \
     setuptools
