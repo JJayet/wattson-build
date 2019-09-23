@@ -27,9 +27,11 @@ RUN  apt-get update \
       openssh-client \
   && rm -rf /var/lib/apt/lists/*
 
-COPY ./get-pip.py ~
+COPY ./get-pip.py /home
 
-RUN python3.7 ~/get-pip.py
+RUN python3.7 /home/get-pip.py
+
+ENV PATH="/root/.local/bin:${PATH}"
 
 RUN pip3.7 install wheel \
     python-subunit==1.3.0 \
